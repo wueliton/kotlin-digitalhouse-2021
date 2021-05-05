@@ -74,10 +74,53 @@ fun main() {
     }
      */
 
-    var x: Int = 0
-    while(x < 2) {
-        println(x)
-        x++
-    }
+//    var x: Int = 0
+//    while(x < 2) {
+//        println(x)
+//        x++
+//    }
 
+//    val nome = meuNomeCompleto("Paulo", "Horacio")
+//    val soma = soma(1,2)
+//    println(nome)
+//    println(soma)
+
+//    println(maiorNumero(100,47,60))
+//    println(compararTextos("Teste","Tewxto"))
+//    println(ePar(3432))
+    imprimeCemImparInteiros()
+}
+
+fun meuNomeCompleto(nome: String, sobrenome: String): String {
+    return "$nome $sobrenome"
+}
+
+fun soma(numA: Int, numB: Int): Int {
+    return numA + numB
+}
+
+fun maiorNumero(numA: Int, numB: Int, numC: Int): Int? {
+    val listNumber: List<Int> = listOf(numA, numB, numC)
+    return listNumber.maxOrNull()
+}
+
+fun compararTextos(textoA: String, textoB: String): Boolean {
+    return textoA == textoB
+}
+
+fun ePar(num: Int): Boolean {
+    return num % 2 == 0
+}
+
+fun imprimeCemImparInteiros() {
+    var numbersPrinted = 0
+    var iterador = 1
+
+    while(numbersPrinted !== 100) {
+        if(iterador % 2 != 0 ) {
+            println(iterador)
+            numbersPrinted++
+        }
+        iterador++
+    }
 }
