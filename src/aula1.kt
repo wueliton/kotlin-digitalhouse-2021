@@ -1,5 +1,5 @@
 fun main() {
-    /*println("teste");
+    println("teste");
 
     //val - imutável
     //var - mutável
@@ -24,9 +24,8 @@ fun main() {
     println(n)
 
     //Tabela Verdade
-    println(2 == 2)*/
+    println(2 == 2)
 
-    /*
     //Listas imutáveis
     val pets = listOf<String>("cachorro", "gato", "papagaio", "peixe")
     println(pets.count())
@@ -39,9 +38,7 @@ fun main() {
     petsMutaveis.add("golfinho")
 
     println(petsMutaveis)
-     */
 
-    /*
     val aleatorio: Int = (0..40).random()
     println(aleatorio)
     when {
@@ -50,15 +47,11 @@ fun main() {
         aleatorio <= 29.9 -> println("Sobrepeso")
         else -> println("Obesidade")
     }
-     */
 
-    /*
     for(num in 1..10 step 4) {
         println(num)
     }
-     */
 
-    /*
     val forList = mutableListOf<String>("cachorro", "gato", "papagaio", "peixe", "coruja")
 
     for(item in forList) {
@@ -72,23 +65,28 @@ fun main() {
     forList.forEach {
         println(it)
     }
-     */
 
-//    var x: Int = 0
-//    while(x < 2) {
-//        println(x)
-//        x++
-//    }
+    var x: Int = 0
+    while(x < 2) {
+        println(x)
+        x++
+    }
 
-//    val nome = meuNomeCompleto("Paulo", "Horacio")
-//    val soma = soma(1,2)
-//    println(nome)
-//    println(soma)
+    val nome = meuNomeCompleto("Paulo", "Horacio")
+    val soma = soma(1,2)
+    println(nome)
+    println(soma)
 
-//    println(maiorNumero(100,47,60))
-//    println(compararTextos("Teste","Tewxto"))
-//    println(ePar(3432))
+    println(maiorNumero(100,47,60))
+    println(compararTextos("Teste","Tewxto"))
+    println(ePar(3432))
     imprimeCemImparInteiros()
+    println(analisaNumeros(3,3,3,1))
+    imprimeCemNumerosPositivos()
+    val pessoa1 = Aposentadoria(60,"masculino",30)
+    println(pessoa1.elegivelParaAposentar())
+    val valores = SomaValores(listOf(1,4,7))
+    valores.somaValores()
 }
 
 fun meuNomeCompleto(nome: String, sobrenome: String): String {
@@ -122,5 +120,16 @@ fun imprimeCemImparInteiros() {
             numbersPrinted++
         }
         iterador++
+    }
+}
+
+fun analisaNumeros(numA: Int, numB: Int, numC: Int, numD: Int): Boolean {
+    if(numA > numC && numA > numD || numB > numC && numB > numD) return true
+    return false
+}
+
+fun imprimeCemNumerosPositivos() {
+    for(num in 1..100) {
+        println(num)
     }
 }
